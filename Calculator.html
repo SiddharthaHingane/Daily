@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+</html>
+    <head>
+        <style>
+            body{
+                background-color: #FFB300;
+                color: red;
+            }
+            
+            .CalcuName{
+                margin-bottom: 10px;
+                text-align: center;
+                width: 542px;
+                font-size: 50px;
+                }
+            input[type="button"]{
+                width:160px;
+                color: rgb(ff, ff, ff);
+                font-size:40px;
+                border-radius: 15px;
+                border-color:#1ae7ee;
+                }
+            input[type="text"]{
+                text-align: right;
+                font-size: 40px;
+                background-color: white;
+                border-color: black ;
+                width:100%;
+                outline: none;
+                background: none;
+                border: none;
+                border-bottom: 2px solid #4CAF50;
+                }
+            div.calc{
+                margin: auto;
+                width: 50%;
+                padding: 70px;
+            }
+        </style>
+        <script>
+            function display(num)
+            {
+            document.getElementById("txtbox").value+=num
+            }
+            function compute()
+            {
+            var problem = document.getElementById("txtbox").value
+            var solution = eval(problem)
+            document.getElementById("txtbox").value = solution
+            }
+            function txtClear()
+            {
+            document.getElementById("txtbox").value = ""
+            }
+            function backspace() {
+                var bsp = document.getElementById("txtbox").value;
+                document.getElementById("txtbox").value=bsp.substring(0,bsp.length -1);
+            }
+        </script>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div class="calc">
+            <div class = "CalcuName" >Calculator</div>
+            <table>
+                <tr>
+                    <td colspan="3"><input type="text" id="txtbox"/></td>
+                    <td><input type="button" value="C" onclick="txtClear()"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="display('1')"/> </td>
+                    <td><input type="button" value="2" onclick="display('2')"/> </td>
+                    <td><input type="button" value="3" onclick="display('3')"/> </td>
+                    <td><input type="button" value="+" onclick="display('+')"/> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="display('4')"/> </td>
+                    <td><input type="button" value="5" onclick="display('5')"/> </td>
+                    <td><input type="button" value="6" onclick="display('6')"/> </td>
+                    <td><input type="button" value="-" onclick="display('-')"/> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="display('7')"/> </td>
+                    <td><input type="button" value="8" onclick="display('8')"/> </td>
+                    <td><input type="button" value="9" onclick="display('9')"/> </td>
+                    <td><input type="button" value="×" onclick="display('*')"/> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="." onclick="display('.')"/> </td>
+                    <td><input type="button" value="0" onclick="display('0')"/> </td>
+                    <td><input type="button" value="=" onclick="compute()"/> </td>
+                    <td><input type="button" value="÷" onclick="display('/')"/> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="bsp" value="⌫" onclick="backspace()"/></td>
+                    <td><input type="button" value="00" onclick="display('00')"/> </td>
+                    <td><input type="button" value="000" onclick="display('000')"/> </td>
+                    <td><input type="button" value="❤"/></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
