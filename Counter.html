@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Counter</title>
+<style>
+#counter{
+font-family: "Lucida Console", Courier, monospace;
+color:#329c9c;
+font-size: 150px;
+text-align: center;
+}
+button{
+/* to make round edges*/
+border-radius: 10px;
+background-color:#44f5f5;
+border-color:#44ffff ;
+color: rgb(255, 255, 255);
+font-size: xx-large;
+}
+table{
+border: 5px dotted #44f5f5;
+background-color: white;
+}
+body{
+background-color: #44f5f5;
+}
+h2 {
+color: white;
+font-size: 50px;
+}
+</style>
+<script>
+var i =0;
+function increment() {
+i++;
+display();
+}
+function decrement() {
+i--;
+display();
+}
+function display() {
+document.getElementById("counter").innerHTML =i;
+}
+</script>
+</head>
+<body>
+<h2 align ="center">COUNTER</h2>
+<table border="1" cellspacing ="30px" align ="center">
+<tr>
+<td colspan="2" ><h1 id="counter">0</h1></td>
+</tr>
+<tr>
+<td>
+<button onclick="increment()">
+Add Count
+</button>
+</td>
+<td>
+<button onclick="decrement()">
+Lower Count
+</button>
+</td>
+</tr>
+</table>
+</body>
+</html>
