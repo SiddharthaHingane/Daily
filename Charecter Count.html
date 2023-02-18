@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Character Counter</title>
+</head>
+<script>
+function counter()
+{
+var text = document.getElementById("txt").value;
+var charCount = text.length;
+document.getElementById("para").innerHTML = "Total Character: ";
+document.getElementById("count").innerHTML = charCount;
+}
+</script>
+<style>
+    button{
+/* to make round edges*/
+border-radius: 12px;
+background-color:#9b4135;
+border-color:#8a382d ;
+color: rgb(255, 255, 255);
+font-size: x-large;
+}
+#count{
+font-family:"Lucida Console";
+color:#9b4135;
+font-size: 75px;
+text-align: center;
+}
+table{
+border: 25px double #9b4135;
+background-color: white;
+text-align: center;
+}
+textarea {
+/* sets size of the textarea */
+height: 75px;
+width: 400px;
+}
+h1 {
+color: rgb(255, 255, 255);
+line-height: 10px;
+}
+body{background-color: #9b4135;}
+.lbl{color:#9b4135;}
+</style>
+<body>
+<h1 align ="center">CHARACTER COUNTER</h1>
+<table cellspacing ="30px" align ="center">
+<tr><td>
+    <h2 class="lbl">
+        Type or Paste the text below:
+        </h2>
+        <textarea id="txt"></textarea>
+        </td></tr>
+        <tr><td>
+        <button onclick="counter()">
+        Get the character count
+        </button>
+        </td></tr>
+        <tr><td>
+        <p id="para" class="lbl"></p>
+        <h1 id="count"></h1>
+        </td></tr>
+</table>
+</body>
+</html>
